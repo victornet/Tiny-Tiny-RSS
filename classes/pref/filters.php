@@ -469,7 +469,7 @@ class Pref_Filters extends Handler_Protected {
 		$title = __($this->dbh->fetch_result($result, 0, "description"));
 
 		if ($action["action_id"] == 4 || $action["action_id"] == 6 ||
-			$action["action_id"] == 7)
+			$action["action_id"] == 7 || $action["action_id"] == 100)
 				$title .= ": " . $action["action_param"];
 
 		return $title;
@@ -942,10 +942,10 @@ class Pref_Filters extends Handler_Protected {
 
 		print "</select>";
 
-		$param_box_hidden = ($action_id == 7 || $action_id == 4 || $action_id == 6) ?
+		$param_box_hidden = ($action_id == 7 || $action_id == 4 || $action_id == 6 || $action_id == 100) ?
 			"" : "display : none";
 
-		$param_hidden = ($action_id == 4 || $action_id == 6) ?
+		$param_hidden = ($action_id == 4 || $action_id == 6 || $action_id == 100) ?
 			"" : "display : none";
 
 		$label_param_hidden = ($action_id == 7) ?	"" : "display : none";

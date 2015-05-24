@@ -1037,6 +1037,12 @@
 							}
 						}
 					}
+
+					// hook for notification action
+					if ($f["type"] == "notify") {
+						require_once('lib/action/notify.php');
+						action_notify_invoke($f, $article);
+					}
 				}
 
 				// Skip boring tags

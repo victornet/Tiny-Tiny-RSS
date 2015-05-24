@@ -591,7 +591,7 @@ function filterDlgCheckAction(sender) {
 		}
 
 		// if selected action supports parameters, enable params field
-		if (action == 4 || action == 6 || action == 7) {
+		if (action == 4 || action == 6 || action == 7 || action == 100) {
 			new Effect.Appear(action_param, {duration : 0.5});
 			if (action != 7) {
 				Element.show(dijit.byId("filterDlg_actionParam").domNode);
